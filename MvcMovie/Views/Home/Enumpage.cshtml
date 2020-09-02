@@ -1,0 +1,9 @@
+@using MvcMovie.Models
+@model MvcMovie.Models.CountryEnumViewModel
+
+<form asp-controller="Home" asp-action="ResultPage" method="post">
+    <select asp-for="EnumCountry" 
+            asp-items="Html.GetEnumSelectList<CountryEnum>()">
+    </select> 
+    <br /><button type="submit">Register</button>
+</form>

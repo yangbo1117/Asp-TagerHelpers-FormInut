@@ -1,0 +1,22 @@
+@model MvcMovie.Models.DemoViewModel
+
+<table>
+    <thead>
+        <tr>
+            <th>Name:</th>
+            <th>Is Done</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.ToDo)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.IsDone</td>
+            </tr>
+        }
+        
+    </tbody>
+
+</table>
+

@@ -1,0 +1,32 @@
+﻿@model MvcMovie.Models.RegisterViewModel
+
+<div asp-validation-summary="ModelOnly"></div>
+
+<form asp-controller="Home" asp-action="Register" method="post">
+    <div>
+        <label asp-for="Email"></label><br/>
+        <input asp-for="Email" /><br />
+        <span asp-validation-for="Email"></span>
+    </div>
+    <div>
+        <label asp-for="Password"></label><br/>
+        <input asp-for="Password" /><br />
+        <span asp-validation-for="Password"></span>
+    </div>
+    <div>
+        <label asp-for="Address"></label><br />
+        <div>
+            <label asp-for="Address.AddressName"></label><br />
+            <input asp-for="Address.AddressName" />
+            <span asp-validation-for="Address.AddressName"></span>
+        </div>
+        <div>
+            <label asp-for="Address.AddressCode"></label><br />
+            <input asp-for="Address.AddressCode" />
+            <span asp-validation-for="Address.AddressCode"></span>
+        </div>
+    </div>
+    <div>
+        <button type="submit">Register</button>
+    </div>
+</form>

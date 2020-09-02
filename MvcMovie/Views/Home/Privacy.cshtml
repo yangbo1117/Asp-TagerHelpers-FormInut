@@ -1,0 +1,15 @@
+﻿@model MvcMovie.Models.Person
+@{
+    var index = (int)ViewData["index"];
+}
+<h1>@index</h1>
+<form asp-controller="Home" asp-action="Edit" method="post">
+    @* @Html.EditorFor(m => m.Colors[index]) *@
+    @for(var i = 0; i < @index; i++)
+    {
+        @Html.EditorFor(m => m.Colors[i])
+    }
+    <label asp-for="Age"></label>
+    <input asp-for="Age" /><br />
+    <button type="submit">Post</button>
+</form>

@@ -1,0 +1,9 @@
+@model MvcMovie.Models.ToDoItem
+
+<td>
+    <label asp-for="@Model.Name"></label>
+    @Html.DisplayFor(model => model.Name)
+</td>
+<td>
+    <input asp-for="@Model.IsDone" />
+</td>
